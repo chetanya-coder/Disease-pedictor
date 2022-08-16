@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/second.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="head"><h1><span> Results</span>
+         of   your  diagnosis   are  as
+        <span>below </span> :</h1>
+    </div>
+    <div class="main">
+        <div class="result">
+            <div class="display">
+                <h2><span>Disease</span>  Predicted :</h2>
+                <br>
+                <br>
+                <p class="disease">{{pred}}</p>
+            </div>
+            <div class="display">
+                <h2><span>Precautions</span> to be taken :</h2>
+                <br>
+                <br>
+                <p >{{prec}}</p>
+            </div>
+            <div class="display">
+                <h2><span>Tests</span> you should take :</h2>
+                <br>
+                <br>
+                <p>{{tes}}</p>
+            </div>
+        </div>
+        <div class="doc"><img src="{{url_for('static',filename='images/Doctors-pana.png')}}" alt="image of docs"></div>
+    </div>
+</body>
+</html>

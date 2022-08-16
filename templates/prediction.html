@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <script>
+      $(document).ready(function()
+      {
+          var list=['itching','skin_rash','nodal_skin_eruptions','continuous_sneezing','shivering','chills','joint_pain',
+  'stomach_pain','acidity','ulcers_on_tongue','muscle_wasting','vomiting','burning_micturition','spotting_ urination','fatigue',
+  'weight_gain','anxiety','cold_hands_and_feets','mood_swings','weight_loss','restlessness','lethargy','patches_in_throat',
+  'irregular_sugar_level','cough','high_fever','sunken_eyes','breathlessness','sweating','dehydration','indigestion',
+  'headache','yellowish_skin','dark_urine','nausea','loss_of_appetite','pain_behind_the_eyes','back_pain','constipation',
+  'abdominal_pain','diarrhoea','mild_fever','yellow_urine','yellowing_of_eyes','acute_liver_failure','fluid_overload',
+  'swelling_of_stomach','swelled_lymph_nodes','malaise','blurred_and_distorted_vision','phlegm','throat_irritation',
+  'redness_of_eyes','sinus_pressure','runny_nose','congestion','chest_pain','weakness_in_limbs','fast_heart_rate',
+  'pain_during_bowel_movements','pain_in_anal_region','bloody_stool','irritation_in_anus','neck_pain','dizziness','cramps',
+  'bruising','obesity','swollen_legs','swollen_blood_vessels','puffy_face_and_eyes','enlarged_thyroid','brittle_nails',
+  'swollen_extremeties','excessive_hunger','extra_marital_contacts','drying_and_tingling_lips','slurred_speech','knee_pain','hip_joint_pain',
+  'muscle_weakness','stiff_neck','swelling_joints','movement_stiffness','spinning_movements','loss_of_balance','unsteadiness','weakness_of_one_body_side',
+  'loss_of_smell','bladder_discomfort','foul_smell_of urine','continuous_feel_of_urine','passage_of_gases','internal_itching','toxic_look_(typhos)',
+  'depression','irritability','muscle_pain','altered_sensorium','red_spots_over_body','belly_pain','abnormal_menstruation','dischromic _patches',
+  'watering_from_eyes','increased_appetite','polyuria','family_history','mucoid_sputum','rusty_sputum','lack_of_concentration','visual_disturbances',
+  'receiving_blood_transfusion','receiving_unsterile_injections','coma','stomach_bleeding','distention_of_abdomen','history_of_alcohol_consumption',
+  'fluid_overload','blood_in_sputum','prominent_veins_on_calf','palpitations','painful_walking','pus_filled_pimples','blackheads','scurring','skin_peeling',
+  'silver_like_dusting','small_dents_in_nails','inflammatory_nails','blister','red_sore_around_nose','yellow_crust_ooze'
+]
+  
+  list.sort()
+      
+      $("#symtoms1").select2({
+          data:list
+      });
+      $("#symtoms2").select2({
+          data:list
+      });
+      $("#symtoms3").select2({
+          data:list
+      });
+      $("#symtoms4").select2({
+          data:list
+      });
+      $("#symtoms5").select2({
+          data:list
+      });
+  });
+  </script>
+    <title>Digi Care</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span>D</span>igi<span>C</span>are
+        </div>
+        <div class="head">
+            <div class="doc">
+              <img src="{{url_for('static',filename='images/doctors.png')}}"  alt="image of doctors" />
+            </div>
+            <div class="para">
+                <h1>
+                  <span>Stay</span> Safe, <span>Stay</span> Healthy.
+                </h1>
+                <br />
+                <br />
+                <br />
+                <h2>
+                  We predict diseases by
+                  <br /> analyzing your symptoms
+                </h2>
+                <a href="#main">
+                  <button class="button">learn more</button>
+                </a>
+              </div>
+        </div>
+    </header>
+    <!-----------main portion of website here-------------------------------------->
+    <main>
+        <div class="main" id="main">
+            <div class="details">
+                <h1>Symptom Checker</h1>
+                <p>
+                  Choose symptoms using our Symptom Checker to find a possible diagnosis
+                  for your health issue.
+                </p>
+                <p>
+                  Consult with your doctor if you feel you have a serious medical problem.
+                </p>
+              </div>
+
+        <!----------form for filling symptoms-------------------------->
+        <div class="dropdown-form"> 
+            <form id="dropdown" action='/predict' method="post" >
+                <label for="symptom1">Choose symptom1:</label>
+                <br>
+                <select form="dropdown" name="one" id="symtoms1" style="width: 250px;">
+                    <option></option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <br>
+        
+                <label for="symptom2">Choose symptom2:</label>
+                <br>
+                <select form="dropdown" name="two" id="symtoms2" style="width: 250px;">
+                    <option></option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <br>
+        
+                <label for="symptom3">Choose symptom3:</label>
+                <br>
+                <select form="dropdown" name="three" id="symtoms3" style="width: 250px;">
+                    <option></option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <br>
+        
+                <label for="symptom4">Choose symptom4:</label>
+                <br>
+                <select form="dropdown" name ="four" id="symtoms4" style="width: 250px;">
+                    <option></option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <br>
+        
+                <label for="symptom5">Choose symptom5:</label>
+                <br>
+                <select form="dropdown" name="five" id="symtoms5" style="width: 250px;">
+                    <option></option>
+                </select>
+                <br>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+       
+    
+          </div>
+    </main>
+</body>
+</html>
+

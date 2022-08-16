@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
+
+* {
+  margin: 0px;
+}
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.head {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #354046;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin:20px;
+}
+.head span {
+  color: #0188df;
+  letter-spacing: 3px;
+}
+
+.doc img {
+  margin-top: 0px;
+  width: 800px;
+  margin-left: 200px;
+  height: 800px;
+}
+
+.main {
+  display: flex;
+}
+.result {
+  padding-left: 60px;
+}
+.display {
+  padding-top: 50px;
+}
+.display span {
+  color: #0188df;
+  letter-spacing: 3px;
+}
+.display h2 {
+  color: #354046;
+  letter-spacing: 3px;
+}
+.disease{
+  text-transform: uppercase;
+  font-weight: 800 !important;
+}
+.display p{
+  /* color:#7a7a7a; */
+  color:#354046;
+  letter-spacing: 1px;
+  font-weight:500;
+  line-height: 200%;
+  font-size: 1.1rem;
+  text-transform:capitalize;
+
+}
+
